@@ -104,64 +104,221 @@
 
   <!-- LEFT: LESSON -->
   <div class="lesson">
-    <h2>Lesson 1: What is HTML?</h2>
-    <p>
-      <strong>HTML</strong> stands for <strong>HyperText Markup Language</strong>.
-      It is the language used to <strong>build the structure of websites</strong>.
-    </p>
+<h2>HTML Basics — Beginner Course</h2>
 
-    <p>
-      HTML uses <strong>tags</strong>.  
-      A tag tells the browser what something is.
-    </p>
+<p>
+  Welcome to <strong>HTML for Beginners</strong>.
+  Read each lesson carefully, then answer the quiz.
+  Use the editor on the right to experiment.
+</p>
 
-    <p>
-      Example:
-      <br>
-      <code>&lt;h1&gt;Hello&lt;/h1&gt;</code>
-    </p>
+<hr>
 
-    <p>
-      <code>&lt;h1&gt;</code> means a big heading  
-      <code>Hello</code> is the text  
-      <code>&lt;/h1&gt;</code> closes the tag
-    </p>
+<!-- LESSON 1 -->
+<h3>Lesson 1: What is HTML?</h3>
 
-    <h2>Lesson 2: Basic HTML Page</h2>
+<p>
+  <strong>HTML</strong> stands for <strong>HyperText Markup Language</strong>.
+  It is used to create the <strong>structure of websites</strong>.
+</p>
 
-    <p>
-      Every HTML page starts with this structure:
-    </p>
+<p>
+  HTML is not programming. It tells the browser what content is.
+</p>
 
-    <p>
-      <code>&lt;!DOCTYPE html&gt;</code>  
-      This tells the browser: “This is HTML5”
-    </p>
+<h4>Quiz 1</h4>
+<form>
+  <p>What is HTML used for?</p>
+  <label><input type="radio" name="q1"> Making games</label><br>
+  <label><input type="radio" name="q1"> Styling websites</label><br>
+  <label><input type="radio" name="q1"> Structuring websites</label>
+</form>
 
-    <p>
-      <code>&lt;html&gt;</code>  
-      This wraps the whole website
-    </p>
+<hr>
 
-    <p>
-      <code>&lt;head&gt;</code>  
-      Contains title and information (not visible)
-    </p>
+<!-- LESSON 2 -->
+<h3>Lesson 2: HTML Tags</h3>
 
-    <p>
-      <code>&lt;body&gt;</code>  
-      Everything visible goes here
-    </p>
+<p>
+  HTML uses <strong>tags</strong>. Tags wrap content.
+</p>
 
-    <h2>Try it yourself 👉</h2>
-    <p>
-      Type HTML in the editor on the right.  
-      The result updates <strong>live</strong>.
-    </p>
+<pre><code>&lt;p&gt;Hello&lt;/p&gt;</code></pre>
 
-    <p>
-      This is exactly how real developers learn.
-    </p>
+<p>
+  Most tags have an opening and closing tag.
+</p>
+
+<h4>Quiz 2</h4>
+<form>
+  <p>Which tag creates a paragraph?</p>
+  <label><input type="radio" name="q2"> &lt;div&gt;</label><br>
+  <label><input type="radio" name="q2"> &lt;p&gt;</label><br>
+  <label><input type="radio" name="q2"> &lt;h1&gt;</label>
+</form>
+
+<hr>
+
+<!-- LESSON 3 -->
+<h3>Lesson 3: Headings</h3>
+
+<p>
+  Headings show importance. Use only one <code>&lt;h1&gt;</code> per page.
+</p>
+
+<pre><code>
+&lt;h1&gt;Main Title&lt;/h1&gt;
+&lt;h2&gt;Section&lt;/h2&gt;
+&lt;h3&gt;Sub-section&lt;/h3&gt;
+</code></pre>
+
+<h4>Quiz 3</h4>
+<form>
+  <p>Which heading is the biggest?</p>
+  <label><input type="radio" name="q3"> &lt;h3&gt;</label><br>
+  <label><input type="radio" name="q3"> &lt;h2&gt;</label><br>
+  <label><input type="radio" name="q3"> &lt;h1&gt;</label>
+</form>
+
+<hr>
+
+<!-- LESSON 4 -->
+<h3>Lesson 4: Paragraphs & Text</h3>
+
+<p>
+  Paragraphs are created using <code>&lt;p&gt;</code>.
+</p>
+
+<pre><code>&lt;p&gt;This is text.&lt;/p&gt;</code></pre>
+
+<p>
+  Formatting text:
+</p>
+
+<pre><code>
+&lt;strong&gt;Bold&lt;/strong&gt;
+&lt;em&gt;Italic&lt;/em&gt;
+</code></pre>
+
+<h4>Quiz 4</h4>
+<form>
+  <p>Which tag makes text bold?</p>
+  <label><input type="radio" name="q4"> &lt;em&gt;</label><br>
+  <label><input type="radio" name="q4"> &lt;strong&gt;</label><br>
+  <label><input type="radio" name="q4"> &lt;p&gt;</label>
+</form>
+
+<hr>
+
+<!-- LESSON 5 -->
+<h3>Lesson 5: Links</h3>
+
+<p>
+  Links are created using the <code>&lt;a&gt;</code> tag.
+</p>
+
+<pre><code>
+&lt;a href="https://example.com"&gt;Visit site&lt;/a&gt;
+</code></pre>
+
+<h4>Quiz 5</h4>
+<form>
+  <p>What does <code>href</code> do?</p>
+  <label><input type="radio" name="q5"> Changes text color</label><br>
+  <label><input type="radio" name="q5"> Tells where the link goes</label><br>
+  <label><input type="radio" name="q5"> Makes text bold</label>
+</form>
+
+<hr>
+
+<!-- LESSON 6 -->
+<h3>Lesson 6: Images</h3>
+
+<p>
+  Images use the <code>&lt;img&gt;</code> tag.
+</p>
+
+<pre><code>
+&lt;img src="image.jpg" alt="Description"&gt;
+</code></pre>
+
+<p>
+  The <code>alt</code> text is important.
+</p>
+
+<h4>Quiz 6</h4>
+<form>
+  <p>Why is <code>alt</code> important?</p>
+  <label><input type="checkbox"> Accessibility</label><br>
+  <label><input type="checkbox"> SEO</label><br>
+  <label><input type="checkbox"> Makes image bigger</label>
+</form>
+
+<hr>
+
+<!-- LESSON 7 -->
+<h3>Lesson 7: Lists</h3>
+
+<pre><code>
+&lt;ul&gt;
+  &lt;li&gt;HTML&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+
+<pre><code>
+&lt;ol&gt;
+  &lt;li&gt;Step one&lt;/li&gt;
+&lt;/ol&gt;
+</code></pre>
+
+<h4>Quiz 7</h4>
+<form>
+  <p>Which list shows numbers?</p>
+  <label><input type="radio" name="q7"> &lt;ul&gt;</label><br>
+  <label><input type="radio" name="q7"> &lt;ol&gt;</label><br>
+  <label><input type="radio" name="q7"> &lt;li&gt;</label>
+</form>
+
+<hr>
+
+<!-- LESSON 8 -->
+<h3>Lesson 8: Page Structure</h3>
+
+<pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;&lt;/head&gt;
+&lt;body&gt;&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<h4>Quiz 8</h4>
+<form>
+  <p>Where does visible content go?</p>
+  <label><input type="radio" name="q8"> &lt;head&gt;</label><br>
+  <label><input type="radio" name="q8"> &lt;body&gt;</label><br>
+  <label><input type="radio" name="q8"> &lt;title&gt;</label>
+</form>
+
+<hr>
+
+<h3>Final Practice</h3>
+<p>
+  Build a page with:
+</p>
+
+<ul>
+  <li>A title</li>
+  <li>One heading</li>
+  <li>A paragraph</li>
+  <li>A link</li>
+  <li>An image</li>
+</ul>
+
+<p>
+  If something breaks, fix it. That’s how real developers learn 💪
+</p>
+
   </div>
 
   <!-- RIGHT: EDITOR -->
