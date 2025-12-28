@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML for Beginners • ComputersBlog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: #e5e7eb;
+    }
+
+    header {
+      padding: 20px;
+      text-align: center;
+      background: #020617;
+      border-bottom: 1px solid #1e293b;
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      height: calc(100vh - 80px);
+    }
+
+    .lesson {
+      padding: 20px;
+      overflow-y: auto;
+    }
+
+    .lesson h2 {
+      color: #38bdf8;
+    }
+
+    .lesson p {
+      line-height: 1.6;
+      color: #cbd5f5;
+    }
+
+    .lesson code {
+      background: #020617;
+      padding: 4px 6px;
+      border-radius: 4px;
+      color: #38bdf8;
+    }
+
+    .editor {
+      display: flex;
+      flex-direction: column;
+      border-left: 1px solid #1e293b;
+    }
+
+    textarea {
+      width: 100%;
+      height: 50%;
+      background: #020617;
+      color: #e5e7eb;
+      border: none;
+      padding: 15px;
+      font-family: monospace;
+      font-size: 14px;
+      resize: none;
+      outline: none;
+    }
+
+    iframe {
+      width: 100%;
+      height: 50%;
+      border: none;
+      background: white;
+    }
+
+    @media (max-width: 900px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
+
+      .editor {
+        height: 60vh;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>HTML for Beginners</h1>
+  <p>Learn how websites are made — by ComputersBlog</p>
+</header>
+
+<div class="container">
+
+  <!-- LEFT: LESSON -->
+  <div class="lesson">
+    <h2>Lesson 1: What is HTML?</h2>
+    <p>
+      <strong>HTML</strong> stands for <strong>HyperText Markup Language</strong>.
+      It is the language used to <strong>build the structure of websites</strong>.
+    </p>
+
+    <p>
+      HTML uses <strong>tags</strong>.  
+      A tag tells the browser what something is.
+    </p>
+
+    <p>
+      Example:
+      <br>
+      <code>&lt;h1&gt;Hello&lt;/h1&gt;</code>
+    </p>
+
+    <p>
+      <code>&lt;h1&gt;</code> means a big heading  
+      <code>Hello</code> is the text  
+      <code>&lt;/h1&gt;</code> closes the tag
+    </p>
+
+    <h2>Lesson 2: Basic HTML Page</h2>
+
+    <p>
+      Every HTML page starts with this structure:
+    </p>
+
+    <p>
+      <code>&lt;!DOCTYPE html&gt;</code>  
+      This tells the browser: “This is HTML5”
+    </p>
+
+    <p>
+      <code>&lt;html&gt;</code>  
+      This wraps the whole website
+    </p>
+
+    <p>
+      <code>&lt;head&gt;</code>  
+      Contains title and information (not visible)
+    </p>
+
+    <p>
+      <code>&lt;body&gt;</code>  
+      Everything visible goes here
+    </p>
+
+    <h2>Try it yourself 👉</h2>
+    <p>
+      Type HTML in the editor on the right.  
+      The result updates <strong>live</strong>.
+    </p>
+
+    <p>
+      This is exactly how real developers learn.
+    </p>
+  </div>
+
+  <!-- RIGHT: EDITOR -->
+  <div class="editor">
+    <textarea id="code">
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My First Page</title>
+</head>
+<body>
+  <h1>Hello World!</h1>
+  <p>I am learning HTML.</p>
+</body>
+</html>
+    </textarea>
+
+    <iframe id="preview"></iframe>
+  </div>
+
+</div>
+
+<script>
+  const textarea = document.getElementById("code");
+  const iframe = document.getElementById("preview");
+
+  function updatePreview() {
+    iframe.srcdoc = textarea.value;
+  }
+
+  textarea.addEventListener("input", updatePreview);
+
+  updatePreview();
+</script>
+
+</body>
+</html>
